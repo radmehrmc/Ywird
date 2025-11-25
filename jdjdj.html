@@ -18,33 +18,13 @@
       color: #fff;
     }
 
-    /* Background particles */
-    .particles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
-    }
-    .particle {
-      position: absolute;
-      background: rgba(212,175,55,0.8);
-      border-radius: 50%;
-      width: 4px;
-      height: 4px;
-      animation: twinkle 4s infinite;
-    }
-    @keyframes twinkle {
-      0%,100% { opacity: 0.2; transform: scale(0.8); }
-      50% { opacity: 1; transform: scale(1.4); }
-    }
-
-    /* Premium card */
+    /* Responsive card */
     .card {
       position: relative;
       width: min(90vw, 420px);
       height: min(50vh, 240px);
       border-radius: 20px;
+      background: linear-gradient(145deg, #1a1a1a, #000);
       border: 2px solid #000;
       overflow: hidden;
       display: flex;
@@ -55,7 +35,6 @@
                   0 0 40px rgba(212,175,55,0.6);
       animation: floatUp 6s ease-in-out infinite alternate;
       z-index: 1;
-      background: linear-gradient(135deg, #111, #000);
     }
 
     /* Gold frame */
@@ -71,24 +50,6 @@
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-    }
-
-    /* Holographic animated background inside card */
-    .holo {
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      background: linear-gradient(270deg, 
-        #d4af37, #f5e79e, #b8860b, #f5e79e, #d4af37);
-      background-size: 400% 400%;
-      animation: holoShift 12s ease infinite;
-      opacity: 0.2;
-      z-index: 0;
-    }
-    @keyframes holoShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     /* Shine sweep */
@@ -108,7 +69,6 @@
       );
       transform: rotate(25deg);
       animation: shineMove 6s linear infinite;
-      z-index: 2;
     }
 
     @keyframes shineMove {
@@ -121,12 +81,12 @@
       to   { transform: translateY(-12px); }
     }
 
-    /* Card header */
+    /* Card header (logo area) */
     .card-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 3;
+      z-index: 1;
     }
     .logo {
       font-size: 1.2rem;
@@ -151,7 +111,7 @@
       letter-spacing: 6px;
       color: #d4af37;
       text-align: center;
-      z-index: 3;
+      z-index: 1;
       text-shadow: 
         0 0 8px rgba(212,175,55,0.8),
         0 0 16px rgba(212,175,55,0.6);
@@ -180,7 +140,7 @@
         transparent 20px
       );
       border-radius: 0 0 20px 20px;
-      z-index: 3;
+      z-index: 1;
     }
 
     /* Claim text */
@@ -203,28 +163,16 @@
   </style>
 </head>
 <body>
-  <!-- Background particles -->
-  <div class="particles">
-    <div class="particle" style="top:10%; left:20%; animation-delay:0s;"></div>
-    <div class="particle" style="top:30%; left:70%; animation-delay:1s;"></div>
-    <div class="particle" style="top:60%; left:40%; animation-delay:2s;"></div>
-    <div class="particle" style="top:80%; left:80%; animation-delay:3s;"></div>
-    <div class="particle" style="top:50%; left:10%; animation-delay:1.5s;"></div>
-  </div>
-
-  <!-- Card -->
   <div class="card">
-    <div class="holo"></div>
     <div class="shine"></div>
     <div class="card-header">
-      <div class="logo">N PASS</div>
+      <div class="logo">N WORD PASS</div>
       <div class="chip"></div>
     </div>
     <h1><span class="n">N</span> Pass</h1>
     <div class="stripe"></div>
   </div>
 
-  <!-- Claim text -->
-  <div class="claim-text">You have claimed the nasser</div>
+  <div class="claim-text"> Congratulations You have claimed the n word pass.
 </body>
 </html>
